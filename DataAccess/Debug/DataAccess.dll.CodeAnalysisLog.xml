@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="f:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\Jonathan\documents\visual studio 2015\Projects\DataAccess\Debug\DataAccess.dll">
+   <Modules>
+    <Module Name="dataaccess.dll">
+     <Namespaces>
+      <Namespace Name="DataAccess">
+       <Types>
+        <Type Name="DataAccess" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CallQueryField(System.String,System.String,{modreq(System.Runtime.CompilerServices.IsByValue)}System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-03-17 23:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="134">Object '$S4' can be disposed more than once in method 'DataAccess::CallQueryField(String^, String^, DataTable)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 134</Issue>
+             <Issue Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="150">Object 'A_2' can be disposed more than once in method 'DataAccess::CallQueryField(String^, String^, DataTable)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 150</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-03-17 23:54:54Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="126">The query string passed to 'SqlCommand::CommandText::set(String^)' in 'DataAccess::CallQueryField(String^, String^, DataTable)' could contain the following variables 'A_1'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CallQueryRow(System.String,System.String,{modreq(System.Runtime.CompilerServices.IsByValue)}System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-03-17 23:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="101">Object '$S3' can be disposed more than once in method 'DataAccess::CallQueryRow(String^, String^, DataTable)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 101</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-03-17 23:54:54Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="93">The query string passed to 'SqlCommand::CommandText::set(String^)' in 'DataAccess::CallQueryRow(String^, String^, DataTable)' could contain the following variables 'A_1'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CallQueryTable(System.String,System.String,{modreq(System.Runtime.CompilerServices.IsByValue)}System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-03-17 23:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="67">Object '$S2' can be disposed more than once in method 'DataAccess::CallQueryTable(String^, String^, DataTable)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 67</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-03-17 23:54:54Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="59">The query string passed to 'SqlCommand::CommandText::set(String^)' in 'DataAccess::CallQueryTable(String^, String^, DataTable)' could contain the following variables 'A_1'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CallTransaction(System.String,System.String,{modreq(System.Runtime.CompilerServices.IsByValue)}System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-03-17 23:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="28">Object '$S1' can be disposed more than once in method 'DataAccess::CallTransaction(String^, String^, DataTable)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 28</Issue>
+             <Issue Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="45">Object 'A_2' can be disposed more than once in method 'DataAccess::CallTransaction(String^, String^, DataTable)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 45</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-03-17 23:54:54Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="c:\users\jonathan\documents\visual studio 2015\projects\dataaccess\dataaccess" File="dataaccess.cpp" Line="20">The query string passed to 'SqlCommand::CommandText::set(String^)' in 'DataAccess::CallTransaction(String^, String^, DataTable)' could contain the following variables 'A_1'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 150</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
